@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        function randArr(size){
+            size = size || 10;
+            let arr = [];
+            for (let i = 0; i < size; i++) {
+                arr[i] = Math.round(Math.random() * 100);
+            }
+            return arr;
+        }
+
+        var a = randArr(3);
+        var b = randArr(3);
+        var c = randArr(3);
+        var d = randArr(3);
+
+        console.log(a,b,c,d);
+
+        function canct(){
+            let res=[];
+            let i =0;
+            while(i < arguments.length){
+                for (let j =0; j<arguments[i].length; j++){
+                    res[res.length]=arguments[i][j];
+                }
+                i++
+            }
+            return res;
+        }
+
+        
+        console.log(canct(a,b,c,d));
+    </script>
+</body>
+</html>
