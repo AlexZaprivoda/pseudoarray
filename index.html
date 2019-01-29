@@ -36,8 +36,20 @@
             return res;
         }
 
+        function reverse(a){
+            let res = [];
+            let j = a.length;
+            for (let i=0; i<a.length; i++){
+                res[res.length]=a[j-1];
+                j--;
+            }
+
+            return res;
+        }
         
         console.log(canct(a,b,c,d));
+        // debugger;
+        console.log(reverse(a));
     </script>
 </body>
 </html>
